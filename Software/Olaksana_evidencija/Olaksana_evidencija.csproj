@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06B6D989-1C33-472C-B768-3E7EEC325F8C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Olaksana_evidencija</RootNamespace>
+    <AssemblyName>Olaksana_evidencija</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DBLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\DBLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmClientAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientAdd.Designer.cs">
+      <DependentUpon>FrmClientAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientEdit.Designer.cs">
+      <DependentUpon>FrmClientEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClients.Designer.cs">
+      <DependentUpon>FrmClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployeeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployeeAdd.Designer.cs">
+      <DependentUpon>FrmEmployeeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployeeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployeeEdit.Designer.cs">
+      <DependentUpon>FrmEmployeeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployees.Designer.cs">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOdabir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOdabir.Designer.cs">
+      <DependentUpon>FrmOdabir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmServiceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmServiceAdd.Designer.cs">
+      <DependentUpon>FrmServiceAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmServiceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmServiceEdit.Designer.cs">
+      <DependentUpon>FrmServiceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmServices.Designer.cs">
+      <DependentUpon>FrmServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Clients.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Services.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\ServiceRepository.cs" />
+    <EmbeddedResource Include="FrmClientAdd.resx">
+      <DependentUpon>FrmClientAdd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientEdit.resx">
+      <DependentUpon>FrmClientEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClients.resx">
+      <DependentUpon>FrmClients.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployeeAdd.resx">
+      <DependentUpon>FrmEmployeeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployeeEdit.resx">
+      <DependentUpon>FrmEmployeeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployees.resx">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOdabir.resx">
+      <DependentUpon>FrmOdabir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmServiceAdd.resx">
+      <DependentUpon>FrmServiceAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmServiceEdit.resx">
+      <DependentUpon>FrmServiceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmServices.resx">
+      <DependentUpon>FrmServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DLLs\DBLayer.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
